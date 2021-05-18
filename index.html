@@ -13,31 +13,52 @@
     </header>
     <main>
       <div id="container">
-        <div style="width: 45%">
-          <h4>You</h4>
+        <div>
+          <h3>You</h3>
           <p id="player">Player</p>
         </div>
-        <div style="width: 45%">
-          <h4>Computer</h4>
+        <div>
+          <h3>Computer</h3>
           <p id="computer">Computer</p>
         </div>
       </div>
       <ul>
         <li>
-          <button id="rock" onclick="playGame('rock')" class="btn">Rock</button>
+          <button
+            id="rock"
+            onclick="playRound('rock', computerPlay())"
+            class="btn"
+          >
+            Rock
+          </button>
         </li>
         <li>
-          <button id="paper" onclick="playGame('paper')" class="btn">
+          <button
+            id="paper"
+            onclick="playRound('paper', computerPlay())"
+            class="btn"
+          >
             Paper
           </button>
         </li>
         <li>
-          <button id="scissors" onclick="playGame('scissors')" class="btn">
+          <button
+            id="scissors"
+            onclick="playRound('scissors', computerPlay())"
+            class="btn"
+          >
             Scissors
           </button>
         </li>
       </ul>
-      <p id="result">Result</p>
+      <div id="score-wrapper">
+        <p id="result">Result</p>
+        <div id="score-container">
+          <h3>You vs Computer</h3>
+          <p id="score"></p>
+          <button onclick="replay()" id="replay">REPLAY</button>
+        </div>
+      </div>
     </main>
     <script src="javascript/game.js"></script>
   </body>
